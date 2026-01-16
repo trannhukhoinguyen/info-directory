@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { filteredTags, searchKeyword } from "@/store";
 import { useStore } from "@nanostores/react";
 import { useMemo } from "react";
+import { tagColors } from "@/lib/colors";
 
 export default function ListWebsites() {
   const search = useStore(searchKeyword);
@@ -61,9 +62,18 @@ export default function ListWebsites() {
                 {website.description}
               </p>
               <div className="flex flex-wrap gap-1">
-                {website.tags.map((tag) => (
-                  <Badge className="px-1 py-0">{tag}</Badge>
-                ))}
+                {website.tags.map((tag) => {
+                  // Lấy class màu dựa trên tên tag
+                  const colorClass = tagColors[tag.toLowerCase()] || tagColors['defaultColor'];
+
+                    return (
+                      <Badge className={cn(
+                        "px-1 py-0",
+                        colorClass, // áp dụng màu đặc biệt
+                      )}>{tag}</Badge>
+                    );
+                  }
+                )}
               </div>
             </div>
             <div>
