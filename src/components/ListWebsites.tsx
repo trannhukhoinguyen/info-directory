@@ -71,7 +71,7 @@ export default function ListWebsites() {
     >
       {filteredWebsites.map((website) => (
         <a
-          key={website.url + '?tag=cheryx'}
+          key={website.url}
           className={cn(
             "rounded bg-background p-4 shadow",
             "flex flex-col gap-4",
