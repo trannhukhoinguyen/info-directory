@@ -13,7 +13,7 @@ export default function ListTags() {
 
   const tags = useMemo(() => {
     const tags = new Set<string>();
-    evisaWebsites.forEach((website) => {
+    toursWebsites.forEach((website) => {
       website.tags.forEach((tag) => tags.add(tag));
     });
     return Array.from(tags).sort((a, b) => a.localeCompare(b));

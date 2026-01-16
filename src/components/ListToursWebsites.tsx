@@ -12,8 +12,8 @@ export default function ListWebsites() {
   const tags = useStore(filteredTags);
 
   const filteredWebsites = useMemo(() => {
-    if (!search && tags.length === 0) return evisaWebsites;
-    return evisaWebsites.filter((website) => {
+    if (!search && tags.length === 0) return toursWebsites;
+    return toursWebsites.filter((website) => {
       if (
         tags.length > 0 &&
         !tags.every((tag) => (website.tags as string[]).includes(tag))

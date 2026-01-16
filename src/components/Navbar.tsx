@@ -13,12 +13,14 @@ import ModalSubmitNew from "./ModalSubmitNew";
 
 function NavIcon({
   icon,
+  text,
   tooltip,
   href,
   target,
   onClick,
 }: {
-  icon: React.ReactNode;
+  icon?: React.ReactNode;
+  text: string;
   tooltip: string;
   href?: string;
   target?: string;
@@ -39,7 +41,7 @@ function NavIcon({
             "rounded-full text-foreground transition-all group-hover:scale-110",
           )}
         >
-          {icon}
+          <h3 className="m-4">{text}</h3>
         </a>
       </TooltipTrigger>
       <TooltipContent>
@@ -61,12 +63,28 @@ export default function Navbar() {
         <div className="fixed inset-x-0 bottom-0 h-16 w-full bg-background to-transparent backdrop-blur-lg [-webkit-mask-image:linear-gradient(to_top,black,transparent)] dark:bg-background md:top-0 md:[-webkit-mask-image:linear-gradient(to_bottom,black,transparent)]"></div>
         <div
           className={cn(
-            "relative mx-auto flex h-full min-h-full items-center gap-2 rounded-full px-2",
+            "relative mx-auto flex h-full min-h-full justify-center items-center gap-8 rounded-full px-8",
             "pointer-events-auto transition-all",
             "bg-background [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]",
           )}
         >
-          <NavIcon icon={<Home size={24} />} tooltip="Home" href="/" />
+          <NavIcon
+            text="Evisa"
+            tooltip="Evisa"
+            href="/"
+          />
+          <Separator orientation="vertical" className="h-full py-2" />
+          <NavIcon
+            text="Tours"
+            tooltip="Tours"
+            href="/tours"
+          />
+          <Separator orientation="vertical" className="h-full py-2" />
+          <NavIcon
+            text="Services"
+            tooltip="Services"
+            href="/services"
+          />
           {/*<NavIcon
             icon={
               <svg

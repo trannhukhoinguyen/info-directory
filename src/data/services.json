@@ -1,0 +1,58 @@
+[
+
+  {
+    "description": "...",
+    "favicon": "https://g2b.co/assets/images/logo.png",
+    "image": "https://g2b.co/assets/images/logo.png",
+    "title": "G2B",
+    "url": "https://g2b.co/",
+    "tags": [
+      "G2B"
+    ],
+    "lastReviewAt": "January 16, 2026"
+  },
+  {
+    "description": "...",
+    "favicon": "https://glodipay.com/assets/images/logo.png",
+    "image": "https://glodipay.com/assets/images/logo.png",
+    "title": "GPay",
+    "url": "https://glodipay.com/",
+    "tags": [
+      "GPay"
+    ],
+    "lastReviewAt": "January 16, 2026"
+  },
+  {
+    "description": "...",
+    "favicon": "https://cdn.vectorstock.com/i/1000v/52/15/esim-card-icon-for-web-vector-49575215.jpg",
+    "image": "https://cdn.vectorstock.com/i/1000v/52/15/esim-card-icon-for-web-vector-49575215.jpg",
+    "title": "eSim",
+    "url": "https://gtrip.travel/travel-esim",
+    "tags": [
+      "eSim"
+    ],
+    "lastReviewAt": "January 16, 2026"
+  },
+  {
+    "description": "...",
+    "favicon": "https://gstay.vn/imgs/logo-1.webp",
+    "image": "https://gstay.vn/imgs/logo-1.webp",
+    "title": "GStay",
+    "url": "https://gstay.vn/",
+    "tags": [
+      "GStay"
+    ],
+    "lastReviewAt": "January 16, 2026"
+  },
+  {
+    "description": "...",
+    "favicon": "https://bangladeshembassy.vn/wp-content/uploads/2024/10/Thue-xe-binh-thuan-Gcar-8.jpg",
+    "image": "https://bangladeshembassy.vn/wp-content/uploads/2024/10/Thue-xe-binh-thuan-Gcar-8.jpg",
+    "title": "GCar",
+    "url": "#",
+    "tags": [
+      "GCar"
+    ],
+    "lastReviewAt": "January 16, 2026"
+  }
+]
