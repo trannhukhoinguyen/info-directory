@@ -5,12 +5,48 @@ import servicesWebsites from "@/data/services.json";
 import { cn } from "@/lib/utils";
 import { filteredTags, searchKeyword } from "@/store";
 import { useStore } from "@nanostores/react";
-import { useMemo } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import { tagColors } from "@/lib/colors";
 
 export default function ListWebsites() {
   const search = useStore(searchKeyword);
   const tags = useStore(filteredTags);
+
+  const isInitialMount = useRef(true);
+
+  // 1. Lấy tag từ URL khi lần đầu load trang (Mount)
+  useEffect(() => {
+    const queryParams = new URLSearchParams(window.location.search);
+    const tagFromUrl = queryParams.get("tag");
+
+    if (tagFromUrl && tags.length === 0) {
+      // Nếu có tag trên URL, cập nhật vào store
+      filteredTags.set([tagFromUrl]);
+    }
+  }, []);
+
+  // 2. Theo dõi thay đổi của store `tags` để cập nhật URL (Update/Delete)
+  useEffect(() => {
+    // Bỏ qua lần chạy đầu tiên để không ghi đè URL khi vừa mới đọc xong
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+      return;
+    }
+
+    const url = new URL(window.location.href);
+
+    if (tags.length > 0) {
+      // Nếu có tag được chọn, cập nhật ?tag=...
+      // Ở đây lấy tag đầu tiên (hoặc join nếu bạn dùng nhiều tag: tags.join(','))
+      url.searchParams.set("tag", tags[0]);
+    } else {
+      // Nếu mảng tags trống (người dùng bỏ chọn), xóa param 'tag'
+      url.searchParams.delete("tag");
+    }
+
+    // Cập nhật URL trên thanh địa chỉ mà không reload trang
+    window.history.replaceState({}, "", url);
+  }, [tags]); // Chạy mỗi khi mảng tags trong store thay đổi
 
   const filteredWebsites = useMemo(() => {
     if (!search && tags.length === 0) return evisaWebsites;
@@ -35,7 +71,7 @@ export default function ListWebsites() {
     >
       {filteredWebsites.map((website) => (
         <a
-          key={website.url}
+          key={website.url + '?tag=cheryx'}
           className={cn(
             "rounded bg-background p-4 shadow",
             "flex flex-col gap-4",
