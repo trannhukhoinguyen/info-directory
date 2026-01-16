@@ -1,4 +1,4 @@
-import dataWebsites from "@/data/websites.json";
+import dataWebsites from "@/data/evisa/evisa.json";
 import { cn } from "@/lib/utils";
 import { filteredTags } from "@/store";
 import { useStore } from "@nanostores/react";

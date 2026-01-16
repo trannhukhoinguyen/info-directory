@@ -1,5 +1,5 @@
 import { Badge } from "@/components/ui/badge";
-import dataWebsites from "@/data/websites.json";
+import dataWebsites from "@/data/evisa/evisa.json";
 import { cn } from "@/lib/utils";
 import { filteredTags, searchKeyword } from "@/store";
 import { useStore } from "@nanostores/react";

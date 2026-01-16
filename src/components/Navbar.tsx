@@ -67,7 +67,7 @@ export default function Navbar() {
           )}
         >
           <NavIcon icon={<Home size={24} />} tooltip="Home" href="/" />
-          <NavIcon
+          {/*<NavIcon
             icon={
               <svg
                 role="img"
@@ -118,7 +118,7 @@ export default function Navbar() {
             tooltip="Buy me a coffee"
             href="https://buymeacoffee.com/lukenguyen_me"
             target="_blank"
-          />
+          />*/}
           <Separator orientation="vertical" className="h-full py-2" />
           <Tooltip>
             <TooltipTrigger asChild>
