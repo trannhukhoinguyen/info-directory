@@ -43,7 +43,7 @@ function NavIcon({
             "rounded-full text-foreground transition-all group-hover:scale-110",
           )}
         >
-          <h3 className="m-4">{text}</h3>
+          <h3 className="m-4 px-2">{text}</h3>
         </a>
       </TooltipTrigger>
       <TooltipContent>
@@ -74,15 +74,15 @@ export default function Navbar() {
           >
             {/* Các NavIcon bên trong */}
             <NavIcon text="Evisa" tooltip="Evisa" href="/" />
-            <Separator orientation="vertical" className="h-2/3 my-auto px-2" />
-            <NavIcon text="Tours" tooltip="Tours" href="/tours" />
-            <Separator orientation="vertical" className="h-2/3 my-auto px-2" />
-            <NavIcon text="Services" tooltip="Services" href="/services" />
-            <Separator orientation="vertical" className="h-2/3 my-auto px-2" />
+            <Separator orientation="vertical" className="h-2/3 my-auto" />
+            <NavIcon text="Tour" tooltip="Tour" href="/tour" />
+            <Separator orientation="vertical" className="h-2/3 my-auto" />
+            <NavIcon text="Service" tooltip="Service" href="/service" />
+            <Separator orientation="vertical" className="h-2/3 my-auto" />
 
             <GameSelection />
 
-            <Separator orientation="vertical" className="h-2/3 my-auto px-2" />
+            <Separator orientation="vertical" className="h-2/3 my-auto" />
             <Tooltip>
               <TooltipTrigger asChild>
                 <ModeToggle />
