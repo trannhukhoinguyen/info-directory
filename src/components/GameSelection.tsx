@@ -45,7 +45,7 @@ export function GameSelection() {
         </Tooltip>
         <DropdownMenuContent align="center" className="w-full rounded-xl">
           {GAMES_LIST.map((game, index) => (
-              <DropdownMenuItem key={index} className="cursor-pointer">
+              <DropdownMenuItem key={index} className="cursor-pointer pl-4">
                 <a
                     href={game.link}
                     target="_blank"
