@@ -1,6 +1,7 @@
 import { ModeToggle } from "@/components/ModeToggle";
 import { ThemeToggleDirect } from "@/components/ThemeToggleDirect";
 import { GameSelection } from "@/components/GameSelection";
+import { OtherLinks } from "@/components/OtherLinks";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import {
@@ -80,7 +81,7 @@ export default function Navbar() {
             <NavIcon text="Service" tooltip="Service" href="/service" />
             <Separator orientation="vertical" className="h-2/3 my-auto" />
 
-            <GameSelection />
+            <OtherLinks />
 
             <Separator orientation="vertical" className="h-2/3 my-auto" />
             <Tooltip>
