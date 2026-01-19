@@ -14,7 +14,7 @@ export default function ListWebsites() {
   const tags = useStore(filteredTags);  
   const isInitialMount = useRef(true);
   
-  const [copiedUrl, setCopiedUrl] = useState<{type: 'url' | 'desc', id: string} | null>(null);
+  const [copiedText, setCopiedText] = useState<{type: 'url' | 'desc', id: string} | null>(null);
   
   // Hàm xử lý copy chung
   const handleCopy = async (e: React.MouseEvent, text: string, id: string, type: 'url' | 'desc') => {
