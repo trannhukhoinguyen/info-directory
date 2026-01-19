@@ -43,7 +43,7 @@ export function GameSelection() {
           </TooltipTrigger>
           <TooltipContent>Danh sách trò chơi</TooltipContent>
         </Tooltip>
-        <DropdownMenuContent align="center" className="w-56 rounded-xl">
+        <DropdownMenuContent align="center" className="w-full rounded-xl">
           {GAMES_LIST.map((game, index) => (
               <DropdownMenuItem key={index} className="cursor-pointer">
                 <a
@@ -54,10 +54,9 @@ export function GameSelection() {
                           variant: "ghost",
                           size: "icon",
                         }),
-                        "rounded-full text-foreground transition-all group-hover:scale-110",
                     )}
                 >
-                  <h3 className="m-4">{game.name}</h3>
+                  <h3 className="text-left m-4">{game.name}</h3>
                 </a>
               </DropdownMenuItem>
           ))}
