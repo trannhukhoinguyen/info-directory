@@ -97,8 +97,8 @@ export default function Navbar() {
           <Separator orientation="vertical" className="h-full my-2 py-2" />
           <Tooltip>
             <TooltipTrigger asChild>
-              {/*<ModeToggle />*/}
-              <ThemeToggleDirect />
+              <ModeToggle />
+              {/*<ThemeToggleDirect />*/}
             </TooltipTrigger>
             <TooltipContent>
               <p>Theme</p>
