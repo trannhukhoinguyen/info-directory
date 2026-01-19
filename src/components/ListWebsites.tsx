@@ -11,17 +11,17 @@ import { Copy, Check } from "lucide-react";
 
 export default function ListWebsites() {
   const search = useStore(searchKeyword);
-  const tags = useStore(filteredTags);  
+  const tags = useStore(filteredTags);
   const isInitialMount = useRef(true);
-  
+
   const [copiedText, setCopiedText] = useState<{type: 'url' | 'desc', id: string} | null>(null);
-  
+
   // Hàm xử lý copy chung
   const handleCopy = async (e: React.MouseEvent, text: string, id: string, type: 'url' | 'desc') => {
     e.preventDefault();
     e.stopPropagation();
     if (!text) return;
-    
+
     try {
       await navigator.clipboard.writeText(text);
       setCopiedText({ type, id });
@@ -30,7 +30,7 @@ export default function ListWebsites() {
       console.error("Lỗi khi copy:", err);
     }
   };
-  
+
   // 1. Lấy tag từ URL khi lần đầu load trang (Mount)
   useEffect(() => {
     const queryParams = new URLSearchParams(window.location.search);
@@ -114,7 +114,7 @@ export default function ListWebsites() {
               className="absolute right-0 top-0 p-1 opacity-0 group-hover:opacity-100 hover:bg-muted rounded transition-all"
               title="Copy URL"
             >
-              {copiedText?.id === website.url && copiedText.type === 'url' ? <CheckIcon /> : <CopyIcon />}
+              {copiedText?.id === website.url && copiedText.type === 'url' ? <Check /> : <Copy />}
             </button>
           </div>
           <div className="flex flex-1 flex-col justify-between gap-2">
@@ -125,11 +125,11 @@ export default function ListWebsites() {
                   {website.description ?? website.title}
                 </p>
                 <button
-                  onClick={(e) => handleCopy(e, descText, website.url + '-desc', 'desc')}
+                  onClick={(e) => handleCopy(e, website.description ?? website.title, website.url + '-desc', 'desc')}
                   className="absolute -right-1 -bottom-1 p-1 bg-background/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 hover:text-primary transition-all rounded"
                   title="Copy Description"
                 >
-                  {copiedText?.id === (website.url + '-desc') ? <CheckIcon /> : <CopyIcon />}
+                  {copiedText?.id === (website.url + '-desc') ? <Check /> : <Copy />}
                 </button>
               </div>
               <div className="flex flex-wrap gap-1">
