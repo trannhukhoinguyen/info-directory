@@ -46,7 +46,6 @@ export function GameSelection() {
         <DropdownMenuContent align="center" className="w-56 rounded-xl">
           {GAMES_LIST.map((game, index) => (
               <DropdownMenuItem key={index} className="cursor-pointer">
-                <span className="mr-2 text-xs opacity-50">{index + 1}.</span>
                 <a
                     href={game.link}
                     target="_blank"
