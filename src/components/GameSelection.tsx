@@ -19,14 +19,14 @@ import { cn } from "@/lib/utils";
 
 export function GameSelection() {
   const GAMES_LIST = [
-    {name: "Werewolf Ultimate", link: "/werewolf-ultimate"},
-    {name: "Werewolf One Night", link: "/werewolf-one-night"},
-    {name: "Mascarade", link: "/mascarade"},
-    {name: "Avalon", link: "/avalon"},
-    {name: "Splendor", link: "/splendor"},
-    {name: "Bang", link: "/bang"},
-    {name: "Uno", link: "/uno"},
-    {name: "Exploding Kittens", link: "/exploding-kittens"},
+    {name: "Werewolf Ultimate", link: "/game/werewolf-ultimate"},
+    {name: "Werewolf One Night", link: "/game/werewolf-one-night"},
+    {name: "Mascarade", link: "/game/mascarade"},
+    {name: "Avalon", link: "/game/avalon"},
+    {name: "Splendor", link: "/game/splendor"},
+    {name: "Bang", link: "/game/bang"},
+    {name: "Uno", link: "/game/uno"},
+    {name: "Exploding Kittens", link: "/game/exploding-kittens"},
   ];
 
   return (
