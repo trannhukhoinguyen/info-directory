@@ -75,13 +75,13 @@ export default function Navbar() {
             tooltip="Evisa"
             href="/"
           />
-          <Separator orientation="vertical" className="h-full my-2 py-2" />
+          <Separator orientation="vertical" className="h-full my-2" />
           <NavIcon
             text="Tours"
             tooltip="Tours"
             href="/tours"
           />
-          <Separator orientation="vertical" className="h-full my-2 py-2" />
+          <Separator orientation="vertical" className="h-full my-2" />
           <NavIcon
             text="Services"
             tooltip="Services"
@@ -92,9 +92,9 @@ export default function Navbar() {
           <ModalSubmitNew>
             <NavIcon icon={<CirclePlus />} tooltip="Submit a new website" />
           </ModalSubmitNew>*/}
-          <Separator orientation="vertical" className="h-full my-2 py-2" />
+          <Separator orientation="vertical" className="h-full my-2" />
           <GameSelection />
-          <Separator orientation="vertical" className="h-full my-2 py-2" />
+          <Separator orientation="vertical" className="h-full my-2" />
           <Tooltip>
             <TooltipTrigger asChild>
               <ModeToggle />
