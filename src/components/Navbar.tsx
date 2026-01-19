@@ -74,15 +74,15 @@ export default function Navbar() {
           >
             {/* Các NavIcon bên trong */}
             <NavIcon text="Evisa" tooltip="Evisa" href="/" />
-            <Separator orientation="vertical" className="h-2/3 my-auto" />
+            <Separator orientation="vertical" className="h-2/3 my-auto px-2" />
             <NavIcon text="Tours" tooltip="Tours" href="/tours" />
-            <Separator orientation="vertical" className="h-2/3 my-auto" />
+            <Separator orientation="vertical" className="h-2/3 my-auto px-2" />
             <NavIcon text="Services" tooltip="Services" href="/services" />
-            <Separator orientation="vertical" className="h-2/3 my-auto" />
+            <Separator orientation="vertical" className="h-2/3 my-auto px-2" />
 
             <GameSelection />
 
-            <Separator orientation="vertical" className="h-2/3 my-auto" />
+            <Separator orientation="vertical" className="h-2/3 my-auto px-2" />
             <Tooltip>
               <TooltipTrigger asChild>
                 <ModeToggle />
