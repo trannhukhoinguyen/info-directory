@@ -38,7 +38,7 @@ export default function ListWebsites() {
 
     if (tagsFromUrl.length > 0) {
       // Nếu có tag trên URL, cập nhật vào store
-      filteredTags.set([tagsFromUrl]);
+      filteredTags.set(tagsFromUrl);
     }
   }, []);
 
