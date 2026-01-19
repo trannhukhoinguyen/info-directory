@@ -5,15 +5,32 @@ import servicesWebsites from "@/data/services.json";
 import { cn } from "@/lib/utils";
 import { filteredTags, searchKeyword } from "@/store";
 import { useStore } from "@nanostores/react";
-import { useEffect, useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { tagColors } from "@/lib/colors";
+import { Copy, Check } from "lucide-react";
 
 export default function ListWebsites() {
   const search = useStore(searchKeyword);
-  const tags = useStore(filteredTags);
-
+  const tags = useStore(filteredTags);  
   const isInitialMount = useRef(true);
-
+  
+  const [copiedUrl, setCopiedUrl] = useState<{type: 'url' | 'desc', id: string} | null>(null);
+  
+  // Hàm xử lý copy chung
+  const handleCopy = async (e: React.MouseEvent, text: string, id: string, type: 'url' | 'desc') => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (!text) return;
+    
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopiedText({ type, id });
+      setTimeout(() => setCopiedText(null), 2000);
+    } catch (err) {
+      console.error("Lỗi khi copy:", err);
+    }
+  };
+  
   // 1. Lấy tag từ URL khi lần đầu load trang (Mount)
   useEffect(() => {
     const queryParams = new URLSearchParams(window.location.search);
@@ -84,19 +101,37 @@ export default function ListWebsites() {
               <img
                 src={
                   website.favicon ||
-                  "https://placehold.co/400?text=No%20Picture"
+                  "https://ps.w.org/replace-broken-images/assets/icon-256x256.png?rev=2561727"
                 }
                 alt={website.title}
                 className="w-full rounded object-cover"
               />
             </div>
             <p className="flex-1 text-sm font-semibold">{website.title}</p>
+            {/* Nút copy URL ở góc tiêu đề */}
+            <button
+              onClick={(e) => handleCopy(e, website.url, website.url, 'url')}
+              className="absolute right-0 top-0 p-1 opacity-0 group-hover:opacity-100 hover:bg-muted rounded transition-all"
+              title="Copy URL"
+            >
+              {copiedText?.id === website.url && copiedText.type === 'url' ? <CheckIcon /> : <CopyIcon />}
+            </button>
           </div>
           <div className="flex flex-1 flex-col justify-between gap-2">
             <div className="flex flex-col gap-1">
-              <p className="line-clamp-3 text-xs text-muted-foreground">
-                {website.description}
-              </p>
+              {/* Description + Copy Description */}
+              <div className="relative group/desc text-xs text-muted-foreground">
+                <p className="line-clamp-3 leading-relaxed">
+                  {website.description ?? website.title}
+                </p>
+                <button
+                  onClick={(e) => handleCopy(e, descText, website.url + '-desc', 'desc')}
+                  className="absolute -right-1 -bottom-1 p-1 bg-background/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 hover:text-primary transition-all rounded"
+                  title="Copy Description"
+                >
+                  {copiedText?.id === (website.url + '-desc') ? <CheckIcon /> : <CopyIcon />}
+                </button>
+              </div>
               <div className="flex flex-wrap gap-1">
                 {website.tags.map((tag) => {
                   // Lấy class màu dựa trên tên tag
