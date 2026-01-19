@@ -34,11 +34,11 @@ export default function ListWebsites() {
   // 1. Lấy tag từ URL khi lần đầu load trang (Mount)
   useEffect(() => {
     const queryParams = new URLSearchParams(window.location.search);
-    const tagFromUrl = queryParams.get("tag");
+    const tagsFromUrl = queryParams.getAll("tag"); // .getAll("tag") sẽ trả về một mảng các giá trị của tất cả key "tag"
 
-    if (tagFromUrl && tags.length === 0) {
+    if (tagsFromUrl.length > 0) {
       // Nếu có tag trên URL, cập nhật vào store
-      filteredTags.set([tagFromUrl]);
+      filteredTags.set([tagsFromUrl]);
     }
   }, []);
 
@@ -52,13 +52,14 @@ export default function ListWebsites() {
 
     const url = new URL(window.location.href);
 
+    // Xóa hết các param 'tag' cũ trước khi set mới
+    url.searchParams.delete("tag");
+
     if (tags.length > 0) {
-      // Nếu có tag được chọn, cập nhật ?tag=...
-      // Ở đây lấy tag đầu tiên (hoặc join nếu bạn dùng nhiều tag: tags.join(','))
-      url.searchParams.set("tag", tags[0]);
-    } else {
-      // Nếu mảng tags trống (người dùng bỏ chọn), xóa param 'tag'
-      url.searchParams.delete("tag");
+      // Lặp qua mảng tags và append từng giá trị vào URL
+      tags.forEach(tag => {
+        url.searchParams.append("tag", tag);
+      });
     }
 
     // Cập nhật URL trên thanh địa chỉ mà không reload trang
@@ -122,10 +123,10 @@ export default function ListWebsites() {
               {/* Description + Copy Description */}
               <div className="relative group/desc text-xs text-muted-foreground">
                 <p className="line-clamp-3 leading-relaxed">
-                  {website.description ?? website.title}
+                  {website.description}
                 </p>
                 <button
-                  onClick={(e) => handleCopy(e, website.description ?? website.title, website.url + '-desc', 'desc')}
+                  onClick={(e) => handleCopy(e, website.description, website.description + '-desc', 'desc')}
                   className="absolute -right-1 -bottom-1 p-1 bg-background/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 hover:text-primary transition-all rounded"
                   title="Copy Description"
                 >
