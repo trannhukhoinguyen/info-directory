@@ -19,14 +19,14 @@ import { cn } from "@/lib/utils";
 
 export function GameSelection() {
   const GAMES_LIST = [
-    {name: "Werewolf Ultimate - Ma Sói", link: "/werewolf-ultimate"},
-    {name: "Werewolf One Night - Ma Sói One Night", link: "/werewolf-one-night"},
-    {name: "Mascarade - Vũ Hội Hóa Trang", link: "/mascarade"},
+    {name: "Werewolf Ultimate", link: "/werewolf-ultimate"},
+    {name: "Werewolf One Night", link: "/werewolf-one-night"},
+    {name: "Mascarade", link: "/mascarade"},
     {name: "Avalon", link: "/avalon"},
-    {name: "Splendor - Cuộc chiến đá quý", link: "/splendor"},
+    {name: "Splendor", link: "/splendor"},
     {name: "Bang", link: "/bang"},
     {name: "Uno", link: "/uno"},
-    {name: "Exploding Kittens - Mèo Nổ", link: "/exploding-kittens"},
+    {name: "Exploding Kittens", link: "/exploding-kittens"},
   ];
 
   return (
