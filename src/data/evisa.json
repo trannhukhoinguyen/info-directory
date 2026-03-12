@@ -782,5 +782,59 @@
       "default"
     ],
     "lastReviewAt": "February 27, 2026"
+  },
+
+  {
+    "description": "...",
+    "favicon": "https://cdn-icons-png.flaticon.com/512/555/555653.png",
+    "image": "https://cdn-icons-png.flaticon.com/512/555/555653.png",
+    "title": "Evisa | JAMAICA | Glodival",
+    "url": "https://evisatravel.org/jamaica/apply-visa",
+    "tags": [
+      "GLODIVAL",
+      "JAMAICA",
+      "default"
+    ],
+    "lastReviewAt": "March 12, 2026"
+  },
+  {
+    "description": "...",
+    "favicon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbgAyKGl9ZcDW9f2f-Gq4uZmk3wM2vTg5xVw&s",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbgAyKGl9ZcDW9f2f-Gq4uZmk3wM2vTg5xVw&s",
+    "title": "Evisa | JAMAICA | Gov",
+    "url": "https://www.enterjamaica.gov.jm/",
+    "tags": [
+      "GOV",
+      "JAMAICA",
+      "default"
+    ],
+    "lastReviewAt": "March 12, 2026"
+  },
+
+  {
+    "description": "...",
+    "favicon": "https://cdn-icons-png.flaticon.com/256/14009/14009711.png",
+    "image": "https://cdn-icons-png.flaticon.com/256/14009/14009711.png",
+    "title": "Evisa | ZIMBABWE | Glodival",
+    "url": "https://evisatravel.org/zimbabwe/apply-visa",
+    "tags": [
+      "GLODIVAL",
+      "ZIMBABWE",
+      "default"
+    ],
+    "lastReviewAt": "March 12, 2026"
+  },
+  {
+    "description": "...",
+    "favicon": "https://evisa.gov.zw/app/assets-projects/logo.svg",
+    "image": "https://evisa.gov.zw/app/assets-projects/logo.svg",
+    "title": "Evisa | ZIMBABWE | Gov",
+    "url": "https://evisa.gov.zw/app/index.html#/",
+    "tags": [
+      "GOV",
+      "ZIMBABWE",
+      "default"
+    ],
+    "lastReviewAt": "March 12, 2026"
   }
 ]
