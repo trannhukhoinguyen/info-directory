@@ -1,14 +1,14 @@
 // Định nghĩa bảng màu (chuyển key về chữ thường để map chính xác)
 export const tagColors: Record<string, string> = {
-  default: "bg-gray-100 text-gray-700 border-gray-200 hover:bg-gray-200", // Màu mặc định
+  default: "bg-gray-100 text-gray-900 border-gray-200 hover:bg-gray-200", // Màu mặc định
 
-  elly: "bg-purple-100 text-purple-700 border-purple-400 hover:bg-purple-300",
-  cheryx: "bg-pink-100 text-pink-700 border-pink-400 hover:bg-pink-300",
-  daisy: "bg-blue-100 text-blue-700 border-blue-400 hover:bg-blue-300",
-  millie: "bg-violet-100 text-violet-700 border-violet-400 hover:bg-violet-300",
-  zany: "bg-green-100 text-green-700 border-green-400 hover:bg-green-300",
+  elly: "bg-purple-300 text-purple-900 border-purple-500 hover:bg-purple-400",
+  cheryx: "bg-pink-300 text-pink-900 border-pink-500 hover:bg-pink-400",
+  daisy: "bg-blue-300 text-blue-900 border-blue-500 hover:bg-blue-400",
+  millie: "bg-violet-300 text-violet-900 border-violet-500 hover:bg-violet-400",
+  zany: "bg-green-300 text-green-900 border-green-500 hover:bg-green-400",
 
-  glodival: "bg-yellow-100 text-yellow-700 border-yellow-400 hover:bg-yellow-300",
-  gov: "bg-red-100 text-red-700 border-red-400 hover:bg-red-300",
+  glodival: "bg-yellow-300 text-yellow-900 border-yellow-500 hover:bg-yellow-400",
+  gov: "bg-red-300 text-red-900 border-red-500 hover:bg-red-400",
 
 };
