@@ -836,12 +836,12 @@
       "default"
     ],
     "lastReviewAt": "March 12, 2026"
-  }
+  },
 
   {
     "description": "...",
-    "favicon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNwPE1UrP0VeWhbxm101JW8czndLqmeswuZw&s",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNwPE1UrP0VeWhbxm101JW8czndLqmeswuZw&s",
+    "favicon": "https://icdn.football-italia.net/wp-content/uploads/2022/05/bl1600415830135.png",
+    "image": "https://icdn.football-italia.net/wp-content/uploads/2022/05/bl1600415830135.png",
     "title": "Evisa | SINGAPORE | Glodival",
     "url": "https://evisatravel.org/singapore/apply-visa",
     "tags": [
@@ -853,8 +853,8 @@
   },
   {
     "description": "...",
-    "favicon": "https://eservices.ica.gov.sg/sgarrivalcard/assets/images/icalogoonly.png",
-    "image": "https://eservices.ica.gov.sg/sgarrivalcard/assets/images/icalogoonly.png",
+    "favicon": "https://evisa.gov.az/assets/images/logo.png",
+    "image": "https://evisa.gov.az/assets/images/logo.png",
     "title": "Evisa | SINGAPORE | Gov",
     "url": "https://eservices.ica.gov.sg/sgarrivalcard/",
     "tags": [
@@ -863,5 +863,32 @@
       "default"
     ],
     "lastReviewAt": "April 15, 2026"
+  },
+
+  {
+    "description": "...",
+    "favicon": "https://icdn.football-italia.net/wp-content/uploads/2022/05/bl1600415830135.png",
+    "image": "https://icdn.football-italia.net/wp-content/uploads/2022/05/bl1600415830135.png",
+    "title": "Evisa | AZERBAIJAN | Glodival",
+    "url": "https://evisatravel.org/azerbaijan/apply-visa",
+    "tags": [
+      "GLODIVAL",
+      "AZERBAIJAN",
+      "default"
+    ],
+    "lastReviewAt": "April 28, 2026"
+  },
+  {
+    "description": "...",
+    "favicon": "https://evisa.gov.az/assets/images/logo.png",
+    "image": "https://evisa.gov.az/assets/images/logo.png",
+    "title": "Evisa | AZERBAIJAN | Gov",
+    "url": "https://evisa.gov.az/en/",
+    "tags": [
+      "GOV",
+      "AZERBAIJAN",
+      "default"
+    ],
+    "lastReviewAt": "April 28, 2026"
   }
 ]
